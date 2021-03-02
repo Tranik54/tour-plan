@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AACA,EAAE,GCDF,AAAA,CAAC,CAAC;EACE,UAAU,EAAE,UAAU;CAAG;;AAE7B,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,oBAAoB;CAAG",
+    "sources": [
+        "../sass/style.sass",
+        "../sass/_settings.sass"
+    ],
+    "names": [],
+    "file": "style.css"
+}
