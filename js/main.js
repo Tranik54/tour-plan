@@ -81,7 +81,7 @@ $(".form").each(function(){
     },
     phone: {
       required: "Phone is required",
-      phone: "Please, enter the number in the format '+7 (XXX) XXX-XX-XX'"
+      phone: "Please, enter the number in the format '+7 (XXX) XXX-XX-XX'",
     },
   },
 });
