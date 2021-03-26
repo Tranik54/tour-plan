@@ -191,25 +191,31 @@
                 9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States
               </li>
               <li class="footer__item footer__item--mb-2">
-                <div class="footer__icon-wrapper"><img src="img/phone-call.svg" alt="Icon: phone call" class="footer__icon"></div>
-                Tel (business hours) : 269 1500 <br/>
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br/>
+                <div class="footer__icon-wrapper"><img src="img/phone-call.svg" alt="Icon: phone call" class="footer__icon">
+                </div>
+                Tel (business hours) : 269 1500 <br />
+                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br />
                 Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper"><img src="img/email.svg" alt="Icon: e-mail" class="footer__icon"></div>
-                cherly.lawson@example.com</li>
+                cherly.lawson@example.com
+              </li>
             </ul>
           </div>
           <!-- /.footer__contact-details -->
           <div class="footer__contact-form">
             <h3 class="footer__title footer__title--mb-3">Send us a message</h3>
-            <form action="send.php" method="POST" class="footer__form">
+            <form action="send.php" method="POST" class="footer__form form">
               <div class="footer__inputs">
-                <input type="text" class="input footer__input" name="name" placeholder="Your Full Name*">
-                <input type="text" class="input footer__input" name="phone" placeholder="Phone Number*">
+                <div class="footer__input-group">
+                  <input type="text" class="input footer__input" name="name" placeholder="Your Full Name*" required>
+                </div>
+                <div class="footer__input-group">
+                  <input type="tel" class="input footer__input phone" name="phone" placeholder="Phone Number*" required>
+                </div>
               </div>
-              <textarea class="footer__message" name="message" placeholder="Message"></textarea>
+              <textarea class="message footer__message" name="message" placeholder="Message"></textarea>
               <button class="button footer__button" type="submit">Send</button>
               <span class="footer__info">* Required Fields</span>
             </form>
@@ -233,7 +239,31 @@
       </div>
     </div>
     <!-- /.footer-bottom -->
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <!-- /.modal__overlay -->
+      <div class="modal__dialog">
+        <a href="#" class="modal__close">
+          <img src="img/close.svg" alt="Icon: close">
+        </a>
+        <h3 class="modal__title">Booking</h3>
+        <form action="send.php" method="POST" class="modal__form form">
+          <input type="text" class="input modal__input" name="name" placeholder="Your Full Name*" required>
+          <input type="tel" class="input modal__input phone" name="phone" placeholder="Phone Number*" required>
+          <input type="email" class="input modal__input" name="email" placeholder="Email*" required>
+          <textarea class="message modal__message" name="message" placeholder="Message"></textarea>
+          <button class="button modal__button" type="submit">Send</button>
+          <span class="modal__info">* Required Fields</span>
+        </form>
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
+    <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
