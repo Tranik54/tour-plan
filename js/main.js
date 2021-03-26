@@ -72,22 +72,38 @@ $(document).on('keydown', function(e) {
 
 $(".form").each(function(){
   $(this).validate({
-  errorClass: "invalid",
-  messages: {
-    name: "Please specify your name",
-    email: {
-      required: "We need your email address to contact you",
-      email: "Your email address must be in the format of name@domain.com",
+    errorClass: "invalid",
+    rules: {
+      name: {
+        required: true,
+        minlength: 2,
+      },
+      phone: {
+        required: true,
+        minlength: 18,
+      },
     },
-    phone: {
-      required: "Phone is required",
-      phone: "Please, enter the number in the format '+7 (XXX) XXX-XX-XX'",
+
+    messages: {
+      name: {
+        required: "Please specify your name",
+        minlength: jQuery.validator.format("At least {0} characters required!"),
+      },
+      email: {
+        required: "We need your email address to contact you",
+        email: "Your email address must be in the format of name@domain.com",
+      },
+      phone: {
+        required: "Phone is required",
+        minlength: jQuery.validator.format(
+          "Please, enter the number in the format '+7 (XXX) XXX-XX-XX'"
+        ),
+      },
     },
-  },
-});
+  });
 });
 $(document).ready(function(){
   $('.phone').mask('+7 (000) 000-00-00');
 });
-
+  AOS.init();
 });
