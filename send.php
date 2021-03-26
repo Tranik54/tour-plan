@@ -8,15 +8,35 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
+$email = $_POST['email'];
 
 // Формирование самого письма
-$title = "Новое обращение Best Tour Plan";
-$body = "
-<h2>Новое обращение пользователя</h2>
-<b>Имя:</b> $name<br>
-<b>Номер телефона:</b> $phone<br><br>
-<b>Сообщение:</b><br>$message
-";
+if ($email) {
+    if ($name) {
+        $title = "Новый заказ Best Tour Plan";
+        $body = "
+        <h2>Поступил новый заказ</h2>
+        <b>Имя:</b> $name<br>
+        <b>Телефон:</b> $phone<br>
+        <b>Почта:</b> $email<br>
+        <b>Сообщение:</b><br>$message
+        ";
+    } else {
+        $title = "Новая подписка Best Tour Plan";
+        $body = "
+        <h2>Новая подписка</h2>
+        <b>Почта:</b> $email<br>
+        ";
+    }    
+} else {
+    $title = "Новое обращение Best Tour Plan";
+    $body = "
+    <h2>Новое обращение</h2>
+    <b>Имя:</b> $name<br>
+    <b>Телефон:</b> $phone<br><br>
+    <b>Сообщение:</b><br>$message
+    ";
+}
 
 // Настройки PHPMailer
 $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -30,7 +50,7 @@ try {
     // Настройки вашей почты
     $mail->Host       = 'smtp.yandex.ru'; // SMTP сервера вашей почты
     $mail->Username   = 'tranik54@yandex.ru'; // Логин на почте
-    $mail->Password   = 'uxiengtxntgflfne'; // Пароль на почте
+    $mail->Password   = 'duvckvetojwqwtxh'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('tranik54@yandex.ru', 'Герман Цой'); // Адрес самой почты и имя отправителя
