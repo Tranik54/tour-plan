@@ -10,16 +10,20 @@ body
   max-width: 1110px
   margin: auto
 
-// img
-//   max-width: 100%
+a
+  text-decoration: none
+  color: inherit
+  &:hover
+    text-decoration: underline
 
 a,button,input,textarea
-	outline: none
-
+  outline: none
+button  
+  &:hover
+    background-color: #bf2f1f
 .button
   min-width: 160px
   min-height: 50px
-  padding: 18px 65px
   font-weight: bold
   font-size: 12px
   line-height: 15px
@@ -39,7 +43,7 @@ a,button,input,textarea
   font-weight: normal
   font-size: 12px
   line-height: 15px
-.message    
+.message
   background: $light
   border-radius: 4px
   color: $footer-text-color

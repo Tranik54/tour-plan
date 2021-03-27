@@ -266,14 +266,8 @@
           subscribe to our
           <span class="newsletter-title__strong">Newsletter</span>
         </h2>
-        <form  action="send.php" method="POST" class="subscribe newsletter__subscribe"  data-aos="fade-left">
-          <input
-            type="email"
-            name="email" 
-            class="subscribe__input"
-            placeholder="Your email address"
-            required
-          />
+        <form  action="send.php" method="POST" class="form subscribe newsletter__subscribe">
+          <input type="email" class="input subscribe__input" name="email" placeholder="Your email address*" required>
           <button type="submit" class="subscribe__button">Send</button>
         </form>
       </div>
@@ -410,25 +404,25 @@
       <div class="container">
         <h2 class="activities__title">Other Activities</h2>
         <div class="activities-wrapper">
-          <div class="card activities__card" data-aos="fade-up" data-aos-duration="100">
+          <div class="card activities__card" data-aos="fade-up" data-aos-duration="600">
             <img src="img/activity-1.jpg" alt="The curious corner of chamarel" class="card__image">
             <h3 class="card__title">The curious corner of&nbsp;chamarel</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
-          <div class="card activities__card" data-aos="fade-up" data-aos-duration="300">
+          <div class="card activities__card" data-aos="fade-up" data-aos-duration="600">
             <img src="img/activity-2.jpg" alt="Gymkhana club golf course" class="card__image">
             <h3 class="card__title">Gymkhana club golf course</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
-          <div class="card activities__card" data-aos="fade-up" data-aos-duration="500">
+          <div class="card activities__card" data-aos="fade-up" data-aos-duration="600">
             <img src="img/activity-3.jpg" alt="Tamarind falls hiking trip - full day" class="card__image">
             <h3 class="card__title">Tamarind falls hiking trip&nbsp;-&nbsp;full day</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
-          <div class="card activities__card" data-aos="fade-up" data-aos-duration="700">
+          <div class="card activities__card" data-aos="fade-up" data-aos-duration="600">
             <img src="img/activity-4.jpg" alt="The blue marine discovery quest" class="card__image">
             <h3 class="card__title">The blue marine discovery quest</h3>
-            <button class="card__button">Book Now</button>
+            <button data-toggle="modal" class="card__button">Book Now</button>
           </div>
           <!-- /.card -->
         </div>
@@ -464,7 +458,7 @@
               <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
               <li class="footer__item"><a href="#" class="footer__link">How does it work?</a></li>
               <li class="footer__item"><a href="#" class="footer__link">Frequently Asked Questions</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Deals.mu loyalty programs</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Deals.mu loyalty program</a></li>
               <li class="footer__item"><a href="#" class="footer__link">Promote your Business on BTP</a></li>
             </ul>
           </div>
@@ -472,9 +466,9 @@
           <div class="footer__social-network">
             <h3 class="footer__title footer__title--inline">Social Network</h3>
             <div class="footer__social-links">
-              <a href="#" class="footer__link"><img src="img/facebook.svg" alt="Icon: facebook"></a>
-              <a href="#" class="footer__link"><img src="img/youtube.svg" alt="Icon: youtube"></a>
-              <a href="#" class="footer__link"><img src="img/instagram.svg" alt="Icon: instagram"></a>
+              <a href="http://facebook.com" target="_blank" rel="nofollow noopener" class="footer__link"><img src="img/facebook.svg" alt="Icon: facebook"></a>
+              <a href="http://youtube.com" target="_blank" rel="nofollow noopener" class="footer__link"><img src="img/youtube.svg" alt="Icon: youtube"></a>
+              <a href="http://instagram.com" target="_blank" rel="nofollow noopener" class="footer__link"><img src="img/instagram.svg" alt="Icon: instagram"></a>
             </div>
           </div>
           <!-- /.footer__social-network -->
@@ -498,13 +492,16 @@
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper"><img src="img/phone-call.svg" alt="Icon: phone call" class="footer__icon"></div>
-                Tel (business hours) : 269 1500 <br/>
-                Tel (hotline) Monday - Saturday: 52-56-61-38 (08:00 am – 20:00 pm) <br/>
-                Tel (hotline) Sunday: 52-56-61-38 (08:00 am – 14:00 pm)
+                <div class="footer__phones">
+                  Tel (business hours) : <a href=tel:2691500>269&nbsp;1500</a> <br />
+                  Tel (hotline) Monday - Saturday: <a href=tel:52-56-61-38>52&ndash;56&ndash;61&ndash;38</a> (08:00 am – 20:00 pm) <br />
+                  Tel (hotline) Sunday: <a href=tel:52-56-61-38>52&ndash;56&ndash;61&ndash;38</a> (08:00 am – 14:00 pm)
+                </div>
               </li>
               <li class="footer__item footer__item--mb-2">
                 <div class="footer__icon-wrapper"><img src="img/email.svg" alt="Icon: e-mail" class="footer__icon"></div>
-                cherly.lawson@example.com</li>
+                <a href="mailto:cherly.lawson@example.com">cherly.lawson@example.com</a>
+                </li>
             </ul>
           </div>
           <!-- /.footer__contact-details -->

@@ -10,7 +10,7 @@
                 object-fit: cover
     .card
         width: 230px
-        height: 230px
+        min-height: 230px
     .footer
         &__inputs
             flex-direction: column
@@ -18,21 +18,27 @@
             &-group
                 flex-basis: 100%
 @media (max-width: 992px)
+    a
+        &:hover
+            text-decoration: none
+    button  
+        &:hover
+            background-color: $primary
     .container
         max-width: 700px
     .logo
         width: 132px
+        margin-right: 47px
         &__image
             width: 100%
     .navbar
         &-top
             padding-top: 30px
             padding-bottom: 30px
-        &__search
-            margin-left: auto
         &-menu
             padding-top: 22px
             padding-bottom: 22px
+            justify-content: space-around
             &__link
                 font-size: 12px
                 line-height: 15px
@@ -43,7 +49,7 @@
         margin-bottom: 14px
     .hotel
         padding-top: 0
-        padding-bottom: 53px
+        padding-bottom: 57px
         &-grid
             flex-direction: column
         &__slider
@@ -54,7 +60,9 @@
             width: 100%
     .booking
         width: 340px
+        padding: 25px
     .map
+        height: 210px
         width: 340px
     .newsletter
         padding: 72px 0px 72px 0px
@@ -67,6 +75,8 @@
             line-height: 38px
             margin-bottom: 50px
         &-slider
+            &__button
+                top: 173px
             &__item
                 max-width: 580px
     .activities
@@ -77,7 +87,7 @@
             margin-bottom: 20px
     .card
         width: 340px
-        height: 255px
+        min-height: 255px
         &__title
             max-width: 200px
     .footer
@@ -101,6 +111,7 @@
             grid-column: span 2
         &__legal
             grid-column: span 2
+            justify-self: flex-start
         &__additional
             grid-column: span 3
         &__contact
@@ -128,7 +139,7 @@
     .modal
         &__dialog
             padding: 33px 55px
-            min-width: 320px
+            min-width: 300px
 
 @media (max-width: 767px)
     body
@@ -137,6 +148,8 @@
         max-width: 576px
         width: 92%
     .navbar
+        &-top
+            padding-top: 23px
         &--mobile
             &--fixed
                 position: fixed
@@ -160,7 +173,7 @@
             left: 0
             right: 0
             bottom: 0
-            top: 78px
+            top: 70px
             &--visible
                 display: block
                 overflow: scroll
@@ -188,6 +201,8 @@
             border: none
             background-color: $light
             cursor: pointer
+            &:hover
+                background-color: transparent
             &__line
                 width: 16px
                 height: 1px
@@ -227,6 +242,12 @@
             margin-bottom: 20px
         &-slider
             height: 350px
+    .stars
+        display: flex
+        justify-content: space-between
+        width: 47px
+        margin-right: 15px
+        margin-top: 5px
     .booking
         width: 100%
     .map
@@ -267,7 +288,7 @@
                     transform: translateX(50%)
     .card
         width: 48%
-        height: 255px
+        min-height: 255px
     .activities
         padding-top: 57px
         &__title
@@ -304,36 +325,55 @@
         width: 87%
     .logo
         width: 99px
+    .breadcrumb
+        &-list
+           padding: 14px 0
     .hotel
-        padding-bottom: 38px
+        padding-bottom: 40px
         &-info
             padding-bottom: 40px
         &-slider
             height: 178px
+            &__button
+                background-size: 5px
         &-right
             min-height: 403px
     .map
         height: 173px
     .booking
-        padding: 25px 24px
+        padding: 28px 22px
     .subscribe
         width: 100%
     .newsletter
         padding-bottom: 83px
         padding-top: 64px
+        &__subscribe
+            max-width: 350px
     .reviews
         &-title
             max-width: 245px
     .card
         width: 100%
-        height: 255px
+        min-height: 255px
+        &:nth-child(1) 
+            order: 1
+        &:nth-child(2) 
+            order: 3
+        &:nth-child(3) 
+            order: 2
+        &:nth-child(4) 
+            order: 4
     .activities
+        flex-direction: column
         padding-bottom: 36px
+
     .footer
         &__icon
             &-wrapper
-                text-align: center
-                min-width: 25px
+                text-align: start
+                min-width: 29px
+                padding-left: 0
+                padding-top: 3px
         padding-top: 69px
         padding-bottom: 20px
         &-wrapper
@@ -374,7 +414,7 @@
             &-form
                 grid-row: 7
                 grid-column: 1
-                margin-top: 38px
+                margin-top: 35px
         &__message
             margin-bottom: 16px
         &__info
